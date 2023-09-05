@@ -1,0 +1,1 @@
+deploy: https://ikhovanskiy.github.io/dogis/src/pages/main/index.html
