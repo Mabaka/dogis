@@ -1,0 +1,133 @@
+h1 {
+font-family: Georgia;
+font-size: 32px;
+font-weight: 400;
+line-height: 35px;
+letter-spacing: 0.06em;
+text-align: left;
+}
+h2 {
+font-family: Georgia;
+font-size: 44px;
+font-weight: 400;
+line-height: 57px;
+letter-spacing: 0em;
+text-align: left;
+@include media-mobile {
+    font-family: Georgia;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0.06em;
+    text-align: center;
+    
+    }
+}
+h3 {
+font-family: Georgia;
+font-size: 35px;
+font-weight: 400;
+line-height: 45px;
+letter-spacing: 0.06em;
+text-align: left;
+@include media-mobile {
+    font-family: Georgia;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0.06em;
+    text-align: center;
+    
+    }
+
+}
+h4 {
+font-family: Georgia;
+font-size: 20px;
+font-weight: 400;
+line-height: 23px;
+letter-spacing: 0.06em;
+text-align: left;
+@include media-mobile {
+font-family: Georgia;
+font-size: 15px;
+font-weight: 400;
+line-height: 17px;
+letter-spacing: 0.06em;
+text-align: left;
+}
+}
+h5 {
+font-family: Georgia;
+font-size: 15px;
+font-weight: 400;
+line-height: 17px;
+letter-spacing: 0.06em;
+text-align: left;
+@include media-mobile {
+font-family: Arial;
+font-size: 15px;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: 0px;
+text-align: center;
+}
+}
+.paragraph-l {
+font-family: Arial;
+font-size: 15px;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: 0px;
+text-align: left;
+}
+.cardFont {
+    font-family: Georgia;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0.06em;
+    text-align: center;
+    
+}
+.cardFontLearnMore{
+    font-family: Georgia;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0.06em;
+    text-align: left;
+    
+}
+.paragraph-s {
+    
+font-family: Arial;
+font-size: 12px;
+font-style: italic;
+font-weight: 400;
+line-height: 18px;
+letter-spacing: 0px;
+text-align: left;
+
+}
+.logo_subtitle {
+font-family: Arial;
+font-size: 13px;
+font-weight: 400;
+line-height: 15px;
+letter-spacing: 0.1em;
+text-align: left;
+color: $color-text-main;
+
+}
+a {
+text-decoration: none;
+}
+.btnFont {
+font-family: Georgia;
+font-size: 17px;
+font-weight: 400;
+line-height: 22px;
+letter-spacing: 0.06em;
+text-align: left;
+}
