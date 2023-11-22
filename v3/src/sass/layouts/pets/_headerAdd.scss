@@ -1,0 +1,15 @@
+header {
+    padding-top: 0;
+   @include media-tablet {
+    padding-top: 30px;
+   }
+   .logoContainer {
+        @include media-tablet {
+        padding-left: 0px
+        }
+        @include media-mobile {
+            padding-left: 10px
+            }
+
+    }
+}

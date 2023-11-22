@@ -1,0 +1,14 @@
+{
+  "name": "shelter",
+  "version": "1.0.0",
+  "description": "deploy: https://ikhovanskiy.github.io/dogis/src/pages/main/index.html",
+  "main": "index.js",
+  "scripts": {
+    "style": "sass --watch src/sass/style.scss src/sass/style.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.17.4"
+  }
+}
