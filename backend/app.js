@@ -52,9 +52,7 @@ const hhtps_op = {
     ]
 }
 const httpsServer = https.createServer(credentials, app);
-app.listen('8080', () => {
-    console.log(`Development server is online. Version:${version}`)
-});
+httpsServer.listen(8080);
 
 
 
