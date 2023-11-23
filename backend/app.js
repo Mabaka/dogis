@@ -9,6 +9,7 @@ const randomIntFromInterval = (min, max) => {
 let version = 1;
 
 const cookieParser = require('cookie-parser');
+const { createProxyMiddleware } = require('http-proxy-middleware');
 app.use(cookieParser());
 
 app.use(function (req, res, next) {
@@ -45,6 +46,17 @@ app.get('/',(req,res)=>{
 app.use("/main/", express.static(`${dir}v${3}/src/pages/main/`));
 app.use("/pets/", express.static(`${dir}v${3}/src/pages/pets/`));
 app.use("/contact/", express.static(`${dir}v${3}/src/pages/contact/`));
+
+const proxy_db = {
+    target: "localhost:3000",
+    changeOrigin: true,
+    pathRewrite:{
+        ['^/pets']: '/pets',
+    }
+}
+
+const proxy = createProxyMiddleware(proxy_db);
+app.use('/pets', proxy);
 
 const hhtps_op = {
     key:fs.readFileSync('/etc/ssl/private/kknss-key.pem'),

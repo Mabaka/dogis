@@ -1,5 +1,5 @@
 function getDf(req = "") {
-  const DB_LINK = "http://localhost:3000/pets";
+  const DB_LINK = "/pets";
   fetch(DB_LINK + "?q=" + req)
     .then((res) => res.json())
     .then((res) => init(res));
