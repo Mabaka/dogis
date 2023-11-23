@@ -56,7 +56,7 @@ const proxy_db = {
 }
 
 const proxy = createProxyMiddleware(proxy_db);
-app.use('/pets', proxy);
+app.use('/fpets', proxy);
 
 const hhtps_op = {
     key:fs.readFileSync('/etc/ssl/private/kknss-key.pem'),
