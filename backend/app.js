@@ -1,0 +1,49 @@
+const express = require('express');
+const app = express();
+const dir = 'C:\\Users\\mabak\\prj\\dogis\\';
+const randomIntFromInterval = (min, max) => {
+    return Math.floor(Math.random() * (max - min + 1) + min)
+}
+let version = 1;
+
+const cookieParser = require('cookie-parser');
+app.use(cookieParser());
+
+app.use(function (req, res, next) {
+    version = req.cookies.version;
+    if (version === undefined) {
+        version = randomIntFromInterval(1, 3);
+        res.cookie('version', version, { maxAge: 999999, httpOnly: true });
+    }
+    next();
+});
+
+app.use("/assets/", express.static(`${dir}v${3}\\src\\assets\\`));
+app.use("/df/", express.static(`${dir}v${3}\\src\\df\\`));
+app.use("/js/", express.static(`${dir}v${3}\\src\\js\\`));
+app.use("/sass/", express.static(`${dir}v${3}\\src\\sass\\`));
+app.use("/src/", express.static(`${dir}v${3}\\src\\`));
+
+app.get('/main/:slug?', (req, res) => {    
+    res.sendFile(`${dir}v${version}\\src\\pages\\main\\index.html`);
+});
+
+app.get('/pets/:slug?', (req, res) => {
+    res.sendFile(`${dir}v${version}\\src\\pages\\pets\\index.html`);
+});
+
+app.get('/contact/:slug?', (req, res) => {
+    res.sendFile(`${dir}v${version}\\src\\pages\\contact\\index.html`);
+});
+
+app.use("/main/", express.static(`${dir}v${3}\\src\\pages\\main\\`));
+app.use("/pets/", express.static(`${dir}v${3}\\src\\pages\\pets\\`));
+app.use("/contact/", express.static(`${dir}v${3}\\src\\pages\\contact\\`));
+
+app.listen('8080', () => {
+    console.log(`Development server is online. Version:${version}`)
+});
+
+
+
+
