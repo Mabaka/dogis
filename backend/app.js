@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 const dir = '/home/kozlovns/prj/dogis/';
+const https = require('https');
+const fs = require('fs');
 const randomIntFromInterval = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1) + min)
 }
@@ -40,6 +42,16 @@ app.use("/main/", express.static(`${dir}v${3}/src/pages/main/`));
 app.use("/pets/", express.static(`${dir}v${3}/src/pages/pets/`));
 app.use("/contact/", express.static(`${dir}v${3}/src/pages/contact/`));
 
+const hhtps_op = {
+    key:fs.readFileSync('/etc/ssl/private/kknss-key.pem'),
+    cert:fs.readFileSync('/etc/ssl/certs/kknss-cert.crt'),
+    ca:[
+        fs.readFileSync('/etc/ssl/mdl/kknss-mdl.crt'),
+        fs.readFileSync('/etc/ssl/req/kknss-req.csr'),
+        fs.readFileSync('/etc/ssl/root/kknss-root.crt')
+    ]
+}
+const httpsServer = https.createServer(credentials, app);
 app.listen('8080', () => {
     console.log(`Development server is online. Version:${version}`)
 });
