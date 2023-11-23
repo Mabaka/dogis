@@ -51,7 +51,7 @@ const proxy_db = {
     target: "localhost:3000",
     changeOrigin: true,
     pathRewrite:{
-        ['^/pets']: '/pets',
+        ['^/pets']: '/fpets',
     }
 }
 
