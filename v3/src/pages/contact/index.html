@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our pets</title>
+    <link rel="stylesheet" href="../../sass/pages/pets/style.css" />
+    <link rel="stylesheet" href="../../sass/pages/contact/style.css" />
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <link rel="icon" type="image/x-icon" href="../../assets/Not%20Only/start-screen-puppy.png" />
+</head>
+
+<body>
+    <header>
+        <div class="wrapper">
+            <div class="wrapperHeader">
+                <div class="logoContainer">
+                    <a href="../main/index.html" id="logoLink"></a>
+                    <h1 class="logo_title">Cozy House</h1>
+                    <p class="logo_subtitle">Shelter for pets in Boston</p>
+                </div>
+                <div class="burgerBtn">
+                    <span></span>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="../main/index.html"> About the shelter</a></li>
+                        <li><a  href="../pets/index.html">Our pets</a></li>
+                        <li>
+                            <a href="../main/index.html#helpTheSelter">Help the shelter</a>
+                        </li>
+                        <li><a id="activeLink" href="../contact/index.html">Contacts</a></li>
+                    </ul>
+                </nav>
+                <div class="mobileMenu">
+                    <div class="containerDark"></div>
+                    <div class="containerMenuLinks">
+                        <nav>
+                            <ul>
+                                <li><a href="../main/index.html"> About the shelter</a></li>
+                                <li><a href="#" id="activeLink">Our pets</a></li>
+                                <li>
+                                    <a href="../main/index.html#helpTheSelter">Help the shelter</a>
+                                </li>
+                                <li><a href="#contact">Contacts</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="clearBox"></div>
+        <div class="main_wrapper">    
+            <h1 class="center_text">LET'S GET IN TOUCH</h1>                     
+            <div class="wrapper_form">                
+                <form id="form">      
+                    <div class="wrapper_form_element">
+                        <div class="form_input_area">
+                            <input class="default_input" placeholder="Full Name" type="text" name="fullName" id="contact_fullName">
+                            <input class="default_input" placeholder="Email Address" type="email" name="email" id="contact_email">
+                        </div>                                                            
+                        <textarea class="default_input no_resize" placeholder="Message" name="message" id="contact_message" rows="7"></textarea>
+                        <button class="btn" type="submit">Submit</button>
+                    </div>                                 
+                </form>
+            </div>
+        </div>        
+    </main>
+    <footer id="contact">
+        <div class="wrapper">
+          <div class="footerWrapper">
+            <div class="footerColumnOne">
+              <h3>For questions and suggestions</h3>
+              <div class="mail">
+                <img
+                  src="../../../src/assets/Footer/Icons/icon-email.svg"
+                  alt="icon mail"
+                />
+                <h4><a href="mailto:email@shelter.com">email@shelter.com</a></h4>
+              </div>
+              <div class="phone">
+                <img
+                  src="../../../src/assets/Footer/Icons/icon-phone.svg"
+                  alt="icon phone"
+                />
+                <h4><a href="tel:+136745677554">+13 674 567 75 54</a></h4>
+              </div>
+            </div>
+            <div class="footerColumnTwo">
+              <h3>We are waiting for your visit</h3>
+  
+              <div class="boston">
+                <img
+                  src="../../../src/assets/Footer/Icons/icon-marker.svg"
+                  alt="icon boston"
+                />
+  
+                <h4>
+                  <a href="http://maps.google.com/?q=1%20Central Street,%20Boston"
+                    >1 Central Street, Boston <br />
+                    (entrance from the store)</a
+                  >
+                </h4>
+              </div>
+              <div class="london">
+                <img
+                  src="../../../src/assets/Footer/Icons/icon-marker.svg"
+                  alt="icon London"
+                />
+                <h4>
+                  <a href="http://maps.google.com/?q=18%20South Park,%20London"
+                    >18 South Park, London</a
+                  >
+                </h4>
+              </div>
+            </div>
+            <div class="footerColumnThree">
+              <img src="../../../src/assets/Footer/footer-puppy.png" alt="Doge" />
+            </div>
+          </div>
+        </div>
+      </footer>
+      <div class="popUp"></div>
+  
+      <script src="../../js/mail.js"></script>
+      <script src="../../js/pagination.js"></script>
+</body>
+
+</html>

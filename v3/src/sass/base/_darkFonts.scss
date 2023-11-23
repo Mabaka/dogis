@@ -1,0 +1,24 @@
+    h1 {
+        color: $color-text-main-addtional!important;
+    }
+    
+    .paragraph-l {
+        color: $color-text-main-addtional!important;
+    }
+    
+    
+    .logo_subtitle {
+        color: $color-text-main-addtional!important;
+    }
+    a {
+        color: $color-text-main-addtional!important;
+    }
+    .burgerBtn {
+           span{
+            background-color: $color-btnBrgMenu!important;         
+            }            
+            &::before, &::after{
+            background-color: $color-btnBrgMenu!important;
+            }
+    }
+      
