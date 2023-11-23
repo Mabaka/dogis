@@ -47,6 +47,17 @@ app.use("/main/", express.static(`${dir}v${3}/src/pages/main/`));
 app.use("/pets/", express.static(`${dir}v${3}/src/pages/pets/`));
 app.use("/contact/", express.static(`${dir}v${3}/src/pages/contact/`));
 
+const proxy_db = {
+    target: "http://localhost:3000",
+    changeOrigin: true,
+    pathRewrite:{
+        ['^/fpets']: '/pets',
+    }
+}
+
+const proxy = createProxyMiddleware(proxy_db);
+app.use('/fpets', proxy);
+
 const hhtps_op = {
     key:fs.readFileSync('/etc/ssl/private/kknss-key.pem'),
     cert:fs.readFileSync('/etc/ssl/certs/kknss-cert.crt'),
