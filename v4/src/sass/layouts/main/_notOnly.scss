@@ -1,0 +1,78 @@
+.notOnly {
+    padding-top: 180px;
+    background: url(noise_lines_transparent@2X.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%) , #211F20;
+    @include media-tablet {
+        padding-top: 150px;
+    }
+    .wrapperNotOnly{
+        @include flex-row;
+        align-items:center;
+        justify-content: space-between;
+        @include media-tablet {
+            @include flex-columns;
+        }
+        .backGroundDog {
+            img {
+                width: 100%;
+            }
+            @include media-tablet{
+                max-width: 80%;
+                align-self: flex-end;
+            }
+            @include media-mobile {
+                overflow: hidden;
+                max-width: 260px;
+            }
+            
+        }
+        
+    }
+    .paragraph-l {
+        @include media-mobile {
+            text-align: center
+        }
+    }
+    .notOnlyTextContainer {
+        @include flex-columns;
+        max-width: 460px;
+        padding-bottom: 83px;;
+        @include media-tablet{
+            padding-bottom: 0;
+        }
+    }
+    .titleNotOnly {
+        max-width: 310px;
+        padding-bottom: 42px;
+    }
+    h2 {
+        color: $color-text-main ;
+    }
+    .paragraph-l {
+        color:$color-text
+    }
+    .btnMakeFriend {
+        margin-top: 42px;
+        width: 207px;
+        height: 52px;
+        border-radius: 100px;
+        background-color: $color-primary;
+        @include flex-columns;
+        justify-content: center;
+        @include media-tablet {
+            margin: 42px auto 100px auto;
+        }
+        div {
+            @include flex-row;
+            a{  
+                color: $color-text-addtional;
+                margin: 0 auto;
+            }
+        }
+        &:hover {
+            background-color: $color-primary-hover;
+            cursor: pointer;
+        }
+    }
+
+
+}

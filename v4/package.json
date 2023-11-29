@@ -1,0 +1,11 @@
+{
+  "name": "shelter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "style": "sass --watch src/sass/style.scss src/sass/style.css"
+  },
+  "author": "",
+  "license": "ISC"
+}
