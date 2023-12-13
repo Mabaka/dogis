@@ -1,78 +1,123 @@
+
 let request = new XMLHttpRequest();
 request.open('GET', '../../df/pets.json');
 request.responseType = 'json';
 request.send();
 let df = ''
+request.onload = function(){
 
-request.onload = function () {
-  let currentBlock = document.querySelector('.currentBlock')
-  df = request.response
+let BtnLeft = document.querySelector('.sliderPetsBtnLeft')
+let BtnRight = document.querySelector('.sliderPetsBtnRight')
+let currentBlock = document.querySelector('.currentBlock')
+let nextBlock = document.querySelector('.nextBlock')
 
-  function createBlock(block) {
-    block.innerHTML = ''
-    createCard(block);
-  }
+df = request.response
 
-  function createCard(block) {
-    df.pets.forEach((item, index) => {
-      const url = '"../../assets/Our\ Friend/Pets/' + `${item.img}` + '"'
+let currentShowPets = []
 
-      if (index <= 3) {
-        block.innerHTML += `<div class="card ${item.name}">
-    <div class="cardPetPic ${item.name}" style = 'background-image: url(${url})'></div>
-    <p class="cardFont ">${item.name}</p>
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+}
+
+function clearStack(){
+    currentShowPets.shift()
+    currentShowPets.shift()
+    currentShowPets.shift()
+}
+
+function switchSlides() {
+    nextBlock.style.top = 0;
+    setTimeout(()=>{nextBlock.classList.add('currentBlock');
+    nextBlock.classList.remove('nextBlock');
+    currentBlock.classList.add('nextBlock');
+    nextBlock.style.top = '-100%' ;
+    currentBlock.classList.remove('currentBlock');
+
+    currentBlock = document.querySelector('.currentBlock');
+    nextBlock = document.querySelector('.nextBlock');
+    createBlock(nextBlock)
+    clearStack()
+    initialPopup()
+    },1000)
+}
+
+function createBlock(block){
+block.innerHTML = ''
+createCard(block);
+createCard(block);
+createCard(block);
+}
+
+function checkRepeate(){
+    let i = getRandomInt(df.pets.length)
+    let j = 0
+    for (let arr of currentShowPets) {
+        if (arr == i) {checkRepeate()}
+    }
+    return i
+}
+
+function createCard(block){
+    let i = checkRepeate()
+    currentShowPets.push(i)
+    let nameClass = df.pets[i].name
+    let url = '"../../assets/Our\ Friend/Pets/' + df.pets[i].img + '"'
+    block.innerHTML +=`<div class="card ${nameClass}">
+    <div class="cardPetPic ${nameClass}" style = 'background-image: url(${url})'></div>
+    <p class="cardFont ">${nameClass}</p>
     <div class="cardBtnLearnMore ">
         <p class="cardFontLearnMore">Learn more</p>
     </div>
     </div>`
-      }
-    })
-  }
+}
 
-  createBlock(currentBlock)
-  initialPopup()
+createBlock(currentBlock)
+createBlock(nextBlock)
+clearStack()
+initialPopup()
 
 
-  function popup() {
-    for (let i = 0; i < df.pets.length; i++) {
-      if (this.classList[1] == df.pets[i].name) {
-        url = '"../../assets/Our\ Friend/Pets/' + df.pets[i].img + '"'
-        namePet = df.pets[i].name
-        typePet = df.pets[i].type
-        breed = df.pets[i].breed
-        description = df.pets[i].description
-        age = df.pets[i].age
 
-        inoculations = ''
-        for (let arr of df.pets[i].inoculations) {
-          if (inoculations == '') {
-            inoculations += arr
-          } else {
-            inoculations += ', ' + arr
-          }
+function popup(){
+    for (let i=0; i<df.pets.length;i++){
+        if (this.classList[1] == df.pets[i].name){
+            url =  '"../../assets/Our\ Friend/Pets/' + df.pets[i].img + '"'
+            namePet = df.pets[i].name
+            typePet = df.pets[i].type
+            breed = df.pets[i].breed
+            description = df.pets[i].description
+            age = df.pets[i].age
+
+            inoculations = ''
+            for (let arr of df.pets[i].inoculations) {
+                if (inoculations == '') {
+                    inoculations += arr
+                } else {
+                    inoculations += ', ' + arr
+                }
+            }
+
+            diseases=''
+            for (let arr of df.pets[i].diseases) {
+                if (diseases == '') {
+                    diseases += arr
+                } else {
+                    diseases += ', ' + arr
+                }
+            }
+
+            parasites =''
+            for (let arr of df.pets[i].parasites) {
+                if (parasites == '') {
+                    parasites += arr
+                } else {
+                    parasites += ', ' + arr
+                }
+            }
         }
-
-        diseases = ''
-        for (let arr of df.pets[i].diseases) {
-          if (diseases == '') {
-            diseases += arr
-          } else {
-            diseases += ', ' + arr
-          }
-        }
-
-        parasites = ''
-        for (let arr of df.pets[i].parasites) {
-          if (parasites == '') {
-            parasites += arr
-          } else {
-            parasites += ', ' + arr
-          }
-        }
-      }
     }
     popUp = document.querySelector('.popUp')
-    popUp.innerHTML = `
+    popUp.innerHTML =`
     <div class="popUpWrapper">
     <div class="popUpContainer">
     <div class="btnPopup">
@@ -96,18 +141,22 @@ request.onload = function () {
 
     document.body.style.overflow = "hidden";
     btnPopup = document.querySelector('.btnPopup')
-    btnPopup.addEventListener("click", () => {
-      popUp.innerHTML = ``
-      document.body.style.overflow = "auto"
+    btnPopup.addEventListener("click", ()=>{
+        popUp.innerHTML = ``
+        document.body.style.overflow = "auto"
     });
-  }
+}
 
-  function initialPopup() {
+function initialPopup() {
     let cards = document.querySelectorAll('.currentBlock .card')
     for (let card of cards) {
-      card.addEventListener("click", popup);
+        card.addEventListener("click", popup);
     }
-  }
+}
 
-  initialPopup()
+
+BtnLeft.addEventListener("click", switchSlides);
+BtnRight.addEventListener("click", switchSlides);
+initialPopup()
+
 }
