@@ -1,7 +1,4 @@
-document.onload = () => {
-    console.log(1);
-    init();
-}
+init();
 
 function createCookie(name, value, days) {
     var expires;
