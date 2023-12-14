@@ -68,26 +68,32 @@ function init() {
         createCookie('start_time', Date.now(), 1);
     }
 
-    {
-        document.getElementsByClassName('cardFontLearnMore')[0].onclick = using_slider;
-        document.getElementsByClassName('sliderPetsBtnLeft')[0].onclick = using_slider;
-        document.getElementsByClassName('sliderPetsBtnRight')[0].onclick = using_slider;
-        document.getElementsByClassName('sliderContainer')[0].onclick = using_slider;
-        document.getElementsByClassName('ourFriendsBtnGetToKnowTheRest')[0].onclick = using_slider;
+    {   
+        add_f('.cardFontLearnMore',using_slider,'onclick');
+        add_f('.sliderPetsBtnLeft',using_slider,'onclick');
+        add_f('.sliderPetsBtnRight',using_slider,'onclick');
+        add_f('.sliderContainer',using_slider,'onclick');
+        add_f('.ourFriendsBtnGetToKnowTheRest',using_slider,'onclick');
     }
 
     {
-        document.getElementsByClassName('btn')[0].onclick = using_form();
-        document.getElementsByClassName('phone')[0].onclick = using_phone();
+        add_f('.btn',using_form,'onclick');                
+        add_f('.phone',using_phone,'onclick');                        
     }
 
     {
-        document.getElementById('inputSearch').onchange = find_animal();
+        add_f('#inputSearch',choose_animal,'onchange');                
     }
 
     {
-        document.getElementById('card').forEach(element => {
-            element.onclick = choose_animal();
-        });
+        add_f('.card',choose_animal,'onclick');        
     }
 }
+
+function add_f(name,fn,event){    
+    document.querySelectorAll(name).forEach(element => {
+        element.addEventListener(event,fn)
+    });    
+}
+
+init();
