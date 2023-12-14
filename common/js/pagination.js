@@ -170,7 +170,7 @@ function init(df) {
       'animal_name': event.srcElement?.classList?.[1] || 'null'      
     }
 
-    console.log(event.srcElement?.parentNode.parentNode);
+    console.log(event.srcElement?.parentNode.parentNode.classList);
     ym(95126453,'reachGoal','top_animal',params);
 
   }
