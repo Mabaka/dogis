@@ -1,3 +1,7 @@
+document.onload = () => {    
+    init();
+}
+
 function createCookie(name, value, days) {
     var expires;
     if (days) {
@@ -24,6 +28,36 @@ function getCookie(c_name) {
         }
     }
     return "";
+}
+
+function init() {
+    if (document.cookie.indexOf('start_time=') === -1) {
+        console.log(1);
+        createCookie('start_time', Date.now());
+    }
+
+    {
+        document.getElementsByClassName('cardFontLearnMore')[0].onclick = using_slider;
+        document.getElementsByClassName('sliderPetsBtnLeft')[0].onclick = using_slider;
+        document.getElementsByClassName('sliderPetsBtnRight')[0].onclick = using_slider;
+        document.getElementsByClassName('sliderContainer')[0].onclick = using_slider;
+        document.getElementsByClassName('ourFriendsBtnGetToKnowTheRest')[0].onclick = using_slider;
+    }
+
+    {
+        document.getElementsByClassName('btn')[0].onclick = using_form;
+        document.getElementsByClassName('phone')[0].onclick = using_phone;
+    }
+
+    {
+        document.getElementById('inputSearch').onchange = find_animal;
+    }
+
+    {
+        document.getElementById('card').forEach(element => {
+            element.onclick = choose_animal;
+        });
+    }
 }
 
 function work_is_done() {
@@ -61,35 +95,3 @@ function find_animal() {
 function choose_animal() {
     console.log('is_used');
 }
-
-function init() {
-    if (document.cookie.indexOf('start_time=') === -1) {
-        console.log(1);
-        createCookie('start_time', Date.now());
-    }
-
-    {
-        document.getElementsByClassName('cardFontLearnMore')[0].onclick = using_slider;
-        document.getElementsByClassName('sliderPetsBtnLeft')[0].onclick = using_slider;
-        document.getElementsByClassName('sliderPetsBtnRight')[0].onclick = using_slider;
-        document.getElementsByClassName('sliderContainer')[0].onclick = using_slider;
-        document.getElementsByClassName('ourFriendsBtnGetToKnowTheRest')[0].onclick = using_slider;
-    }
-
-    {
-        document.getElementsByClassName('btn')[0].onclick = using_form;
-        document.getElementsByClassName('phone')[0].onclick = using_phone;
-    }
-
-    {
-        document.getElementById('inputSearch').onchange = find_animal;
-    }
-
-    {
-        document.getElementById('card').forEach(element => {
-            element.onclick = choose_animal;
-        });
-    }
-}
-
-init();
