@@ -50,16 +50,10 @@ function work_is_done() {
         const lost_time = now - start_time;
         const lost_time_sec = lost_time / 60 / 60;
         const lost_time_min = lost_time / 60 / 60/ 60;
-        params = {            
-            'lost_time_sec': 
-            {
-                'version': version,
-                'lost_time_sec': lost_time_sec
-            },            
-            'lost_time_min': {
-                'version': version,
-                'lost_time_min': lost_time_min
-            }
+        params = {
+            'version': version,
+            'lost_time_sec': lost_time_sec,
+            'lost_time_min': lost_time_min
         }
         ym(95126453,'reachGoal','stay_time',params)
     }
