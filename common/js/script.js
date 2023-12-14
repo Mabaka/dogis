@@ -98,12 +98,15 @@ function init_p() {
     add_f('.phone', using_phone, 'click');
     add_f('.mail', using_email, 'click');
 
+    while(document.querySelector('.cardContainer .card') == undefined){
+        continue;
+    }    
     add_f('.cardContainer .card', choose_animal,'click');
     add_f('#inputSearch', find_animal, 'change');
     
 }
 
-function add_f(name, fn, event) {
+function add_f(name, fn, event) {    
     document.querySelectorAll(name).forEach(element => {
         element.addEventListener(event, fn)
     });
