@@ -1,4 +1,4 @@
-/*function createCookie(name, value, days) {
+function createCookie(name, value, days) {
     var expires;
     if (days) {
         var date = new Date();
@@ -26,6 +26,43 @@ function getCookie(c_name) {
     return "";
 }
 
+function using_slider() {
+    console.log('is_used');
+}
+
+function using_form() {
+    console.log('is_used');
+
+    work_is_done();
+}
+
+function work_is_done() {
+    if (document.cookie.indexOf('start_time=') != -1) {
+        const start_time = getCookie('start_time');
+        const now = Date.now();
+
+        const lost_time = now - start_time;
+        const lost_time_min = lost_time / 60;
+
+        console.log(lost_time_min);
+    }
+}
+
+function using_phone() {
+    console.log('is_used');
+
+    work_is_done();
+}
+
+function find_animal() {
+    console.log('is_used');
+}
+
+function choose_animal() {
+    console.log('is_used');
+}
+
+    
 function init() {
     if (document.cookie.indexOf('start_time=') === -1) {
         createCookie('start_time', Date.now(), 1);
@@ -54,39 +91,3 @@ function init() {
         });
     }
 }
-
-function work_is_done() {
-    if (document.cookie.indexOf('start_time=') != -1) {
-        const start_time = getCookie('start_time');
-        const now = Date.now();
-
-        const lost_time = now - start_time;
-        const lost_time_min = lost_time / 60;
-
-        console.log(lost_time_min);
-    }
-}
-
-function using_slider() {
-    console.log('is_used');
-}
-
-function using_form() {
-    console.log('is_used');
-
-    work_is_done();
-}
-
-function using_phone() {
-    console.log('is_used');
-
-    work_is_done();
-}
-
-function find_animal() {
-    console.log('is_used');
-}
-
-function choose_animal() {
-    console.log('is_used');
-}*/
