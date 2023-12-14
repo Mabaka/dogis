@@ -80,7 +80,7 @@ function choose_animal() {
 }
 
 
-async function init_p() {
+function init_p() {
     if (document.cookie.indexOf('start_time=') === -1) {
         createCookie('start_time', Date.now(), 1);
     }
@@ -97,10 +97,7 @@ async function init_p() {
     add_f('.btn', using_form, 'click');
     add_f('.phone', using_phone, 'click');
     add_f('.mail', using_email, 'click');
-
-    while(document.querySelector('.cardContainer .card') == undefined){
-        continue;
-    }    
+    
     add_f('.cardContainer .card', choose_animal,'click');
     add_f('#inputSearch', find_animal, 'change');
     
