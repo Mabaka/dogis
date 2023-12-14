@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-content: space-between;    
-    
+    padding-bottom: 30px;
 }
 
 .main_wrapper,.wrapper_form,.wrapper_form_element{
