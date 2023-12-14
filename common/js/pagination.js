@@ -167,10 +167,10 @@ function init(df) {
     const version = getCookie('version');
     const params = {
       'version': version,
-      'animal_name': event.srcElement?.classList?.[1] || 'null'
+      'animal_name': event.srcElement?.classList?.[1] || 'null'      
     }
 
-    console.log(event);
+    console.log(event.srcElement?.parentNode);
     ym(95126453,'reachGoal','top_animal',params);
 
   }
