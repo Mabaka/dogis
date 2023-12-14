@@ -1,5 +1,3 @@
-init();
-
 function createCookie(name, value, days) {
     var expires;
     if (days) {
@@ -34,11 +32,11 @@ function init() {
     }
 
     {
-        document.getElementsByClassName('cardFontLearnMore')[0].onclick = using_slider();
-        document.getElementsByClassName('sliderPetsBtnLeft')[0].onclick = using_slider();
-        document.getElementsByClassName('sliderPetsBtnRight')[0].onclick = using_slider();
-        document.getElementsByClassName('sliderContainer')[0].onclick = using_slider();
-        document.getElementsByClassName('ourFriendsBtnGetToKnowTheRest')[0].onclick = using_slider();
+        document.getElementsByClassName('cardFontLearnMore')[0].onclick = using_slider;
+        document.getElementsByClassName('sliderPetsBtnLeft')[0].onclick = using_slider;
+        document.getElementsByClassName('sliderPetsBtnRight')[0].onclick = using_slider;
+        document.getElementsByClassName('sliderContainer')[0].onclick = using_slider;
+        document.getElementsByClassName('ourFriendsBtnGetToKnowTheRest')[0].onclick = using_slider;
     }
 
     {
