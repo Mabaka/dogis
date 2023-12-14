@@ -98,7 +98,7 @@ function init_p() {
     add_f('.phone', using_phone, 'click');
     add_f('.mail', using_email, 'click');
 
-    add_f('.card', choose_animal,'click');
+    add_f('.cardContainer .card', choose_animal,'click');
     add_f('#inputSearch', find_animal, 'change');
     
 }
