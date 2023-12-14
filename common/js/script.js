@@ -76,7 +76,7 @@ function find_animal() {
 }
 
 function choose_animal(element) {
-    if(element.classList.contains('card')) {
+    if(element.srcElement.classList.contains('card')) {
         console.log(element);
     }   
 }
