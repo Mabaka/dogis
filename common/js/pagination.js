@@ -163,7 +163,7 @@ function init(df) {
     });
   }
 
-  function find_animal(event) {
+  function top_animal(event) {
     const version = getCookie('version');
     const params = {
       'version': version,
@@ -178,7 +178,7 @@ function init(df) {
     let cards = document.querySelectorAll(".cardContainer .card");
     for (let card of cards) {
       card.addEventListener("click", popup);
-      card.addEventListener("click", find_animal);
+      card.addEventListener("click", top_animal);
     }
   }
 

@@ -71,11 +71,11 @@ function using_email() {
     work_is_done();
 }
 
-function find_animal() {
+function using_find() {
     ym(95126453,'reachGoal','using_find',params);
 }
 
-function find_animal(event) {
+function top_animal(event) {
     const version = getCookie('version');
     const params = {
       'version': version,
@@ -101,7 +101,7 @@ function init_p() {
     add_f('.btn', using_form, 'click');
     add_f('.phone', using_phone, 'click');
     add_f('.mail', using_email, 'click');        
-    add_f('#inputSearch', find_animal, 'change');
+    add_f('#inputSearch', top_animal, 'change');
     
 }
 
