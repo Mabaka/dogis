@@ -26,7 +26,6 @@ app.use("/df/", express.static(`${dir}v${4}/src/df/`));
 app.use("/js/", express.static(`${dir}v${4}/src/js/`));
 app.use("/sass/", express.static(`${dir}v${4}/src/sass/`));
 app.use("/src/", express.static(`${dir}v${4}/src/`));
-app.use("/common/js/", express.static(`${dir}common/js/`));
 
 app.get('/main/:slug?', (req, res) => {    
     res.sendFile(`${dir}v${version}/src/pages/main/index.html`);
@@ -46,6 +45,7 @@ app.get('/',(req,res)=>{
 
 app.use("/main/", express.static(`${dir}v${4}/src/pages/main/`));
 app.use("/pets/", express.static(`${dir}v${4}/src/pages/pets/`));
+app.use("/common/js/", express.static(`${dir}common/js/`));
 app.use("/contact/", express.static(`${dir}v${4}/src/pages/contact/`));
 
 const proxy_db = {
