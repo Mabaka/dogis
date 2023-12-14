@@ -1,4 +1,4 @@
-/*function createCookie(name, value, days) {
+function createCookie(name, value, days) {
     var expires;
     if (days) {
         var date = new Date();
@@ -96,4 +96,4 @@ function add_f(name,fn,event){
     });    
 }
 
-init();*/
+init();
