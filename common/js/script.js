@@ -71,6 +71,21 @@ function using_email() {
     work_is_done();
 }
 
+function find_animal() {
+    ym(95126453,'reachGoal','using_find',params);
+}
+
+function find_animal(event) {
+    const version = getCookie('version');
+    const params = {
+      'version': version,
+      'animal_name': event.srcElement?.classList?.[1] || event.srcElement?.parentNode?.parentNode?.classList?.[1] || 'null'      
+    }
+    
+    ym(95126453,'reachGoal','top_animal',params);
+
+  }
+
 function init_p() {
     if (document.cookie.indexOf('start_time=') === -1) {
         createCookie('start_time', Date.now(), 1);
