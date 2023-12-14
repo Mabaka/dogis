@@ -26,6 +26,7 @@ app.use("/df/", express.static(`${dir}v${4}/src/df/`));
 app.use("/js/", express.static(`${dir}v${4}/src/js/`));
 app.use("/sass/", express.static(`${dir}v${4}/src/sass/`));
 app.use("/src/", express.static(`${dir}v${4}/src/`));
+app.use("/common/js/", express.static(`${dir}common/js/`));
 
 app.get('/main/:slug?', (req, res) => {    
     res.sendFile(`${dir}v${version}/src/pages/main/index.html`);
