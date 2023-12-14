@@ -1,4 +1,5 @@
 document.onload = () => {
+    console.log(1);
     init();
 }
 
