@@ -16,7 +16,7 @@ app.use(function (req, res, next) {
     version = req.cookies.version;
     if (version === undefined) {
         version = randomIntFromInterval(1, 5);
-        res.cookie('version', version, { maxAge: 999999});
+        res.cookie('version', version, { maxAge: 999999, httpOnly: false });
     }
     next();
 });
