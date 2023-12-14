@@ -13,7 +13,7 @@ function init(df) {
   let curentPages = 1;
 
   function createPage() {
-    if(document.querySelector("#page")?.innerHTML == undefined){
+    if (document.querySelector("#page")?.innerHTML == undefined) {
       return
     }
     document.querySelector("#page").innerHTML = `${curentPages}`;
@@ -163,10 +163,14 @@ function init(df) {
     });
   }
 
+  function find_animal(event) {
+    console.log(event);
+  }
   function initialPopup() {
     let cards = document.querySelectorAll(".cardContainer .card");
     for (let card of cards) {
       card.addEventListener("click", popup);
+      card.addEventListener("click",find_animal);
     }
   }
 
