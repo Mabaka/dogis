@@ -1,3 +1,9 @@
+const version = getCookie('version');
+
+const params = {
+    'version': version
+}
+
 function createCookie(name, value, days) {
     var expires;
     if (days) {
@@ -27,12 +33,12 @@ function getCookie(c_name) {
 }
 
 function using_slider() {
-    console.log('is_used');
+    ym(95126453,'reachGoal','using_slider',params)
 }
 
 function using_form() {
-    console.log('is_used');
-
+    
+    ym(95126453,'reachGoal','using_form',params)
     work_is_done();
 }
 
@@ -42,30 +48,35 @@ function work_is_done() {
         const now = Date.now();
 
         const lost_time = now - start_time;
-        const lost_time_min = lost_time / 60;
-
-        console.log(lost_time_min);
+        const lost_time_sec = lost_time / 60 / 60;
+        const lost_time_min = lost_time / 60 / 60/ 60;
+        params = {
+            'version': version,
+            'lost_time_sec': lost_time_sec,
+            'lost_time_min': lost_time_min
+        }
+        ym(95126453,'reachGoal','stay_time',params)
     }
 }
 
 function using_phone() {
-    console.log('is_used');
+    ym(95126453,'reachGoal','using_phone');
 
     work_is_done();
 }
 
 function using_email() {
-    console.log('is_used');
+    ym(95126453,'reachGoal','using_email',params);
 
     work_is_done();
 }
 
 function find_animal() {
-    console.log('is_used');
+    ym(95126453,'reachGoal','using_find',params);
 }
 
 function choose_animal() {
-    console.log('is_used');
+    console.log(1);
 }
 
 
@@ -87,7 +98,7 @@ function init_p() {
     add_f('.phone', using_phone, 'click');
     add_f('.mail', using_email, 'click');
 
-    add_f('.cardContainer', choose_animal,'click');
+    add_f('.card', choose_animal,'click');
     add_f('#inputSearch', find_animal, 'change');
     
 }
