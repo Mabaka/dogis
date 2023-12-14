@@ -13,6 +13,9 @@ function init(df) {
   let curentPages = 1;
 
   function createPage() {
+    if(document.querySelector("#page")?.innerHTML == undefined){
+      return
+    }
     document.querySelector("#page").innerHTML = `${curentPages}`;
     if (document.documentElement.clientWidth < 740) {
       maxCardOnPage = 3;

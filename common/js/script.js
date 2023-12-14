@@ -91,9 +91,7 @@ function init_p() {
 
     add_f('.btn', using_form, 'click');
     add_f('.phone', using_phone, 'click');
-    add_f('.mail', using_email, 'click');
-    
-    document.addEventListener('click',choose_animal);
+    add_f('.mail', using_email, 'click');        
     add_f('#inputSearch', find_animal, 'change');
     
 }
