@@ -75,8 +75,10 @@ function find_animal() {
     ym(95126453,'reachGoal','using_find',params);
 }
 
-function choose_animal() {
-    console.log(1);
+function choose_animal(element) {
+    if(element.classList.contains('card')) {
+        console.log(element);
+    }   
 }
 
 
@@ -98,10 +100,12 @@ function init_p() {
     add_f('.phone', using_phone, 'click');
     add_f('.mail', using_email, 'click');
     
-    add_f('.cardContainer .card', choose_animal,'click');
+    document.addEventListener('click',choose_animal);
     add_f('#inputSearch', find_animal, 'change');
     
 }
+
+
 
 function add_f(name, fn, event) {    
     document.querySelectorAll(name).forEach(element => {
