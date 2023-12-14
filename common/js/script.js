@@ -1,6 +1,4 @@
-document.onload = () => {    
-    init();
-}
+init();
 
 function createCookie(name, value, days) {
     var expires;
@@ -32,30 +30,29 @@ function getCookie(c_name) {
 
 function init() {
     if (document.cookie.indexOf('start_time=') === -1) {
-        console.log(1);
-        createCookie('start_time', Date.now());
+        createCookie('start_time', Date.now(), 1);
     }
 
     {
-        document.getElementsByClassName('cardFontLearnMore')[0].onclick = using_slider;
-        document.getElementsByClassName('sliderPetsBtnLeft')[0].onclick = using_slider;
-        document.getElementsByClassName('sliderPetsBtnRight')[0].onclick = using_slider;
-        document.getElementsByClassName('sliderContainer')[0].onclick = using_slider;
-        document.getElementsByClassName('ourFriendsBtnGetToKnowTheRest')[0].onclick = using_slider;
+        document.getElementsByClassName('cardFontLearnMore')[0].onclick = using_slider();
+        document.getElementsByClassName('sliderPetsBtnLeft')[0].onclick = using_slider();
+        document.getElementsByClassName('sliderPetsBtnRight')[0].onclick = using_slider();
+        document.getElementsByClassName('sliderContainer')[0].onclick = using_slider();
+        document.getElementsByClassName('ourFriendsBtnGetToKnowTheRest')[0].onclick = using_slider();
     }
 
     {
-        document.getElementsByClassName('btn')[0].onclick = using_form;
-        document.getElementsByClassName('phone')[0].onclick = using_phone;
+        document.getElementsByClassName('btn')[0].onclick = using_form();
+        document.getElementsByClassName('phone')[0].onclick = using_phone();
     }
 
     {
-        document.getElementById('inputSearch').onchange = find_animal;
+        document.getElementById('inputSearch').onchange = find_animal();
     }
 
     {
         document.getElementById('card').forEach(element => {
-            element.onclick = choose_animal;
+            element.onclick = choose_animal();
         });
     }
 }
