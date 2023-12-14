@@ -170,6 +170,7 @@ function init(df) {
       'animal_name': event.srcElement?.classList?.[1] || 'null'
     }
 
+    console.log(event);
     ym(95126453,'reachGoal','top_animal',params);
 
   }

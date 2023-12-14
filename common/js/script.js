@@ -80,8 +80,6 @@ function init_p() {
         createCookie('start_time', Date.now(), 1);
     }
 
-
-    add_f('.cardFontLearnMore', using_slider, 'click');
     add_f('.sliderPetsBtnLeft', using_slider, 'click');
     add_f('.sliderPetsBtnRight', using_slider, 'click');
     add_f('.sliderContainer', using_slider, 'click');
