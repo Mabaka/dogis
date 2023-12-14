@@ -1,13 +1,3 @@
-const version = getCookie('version');
-
-const params = {
-    'version': version
-}
-
-function choose_animal(element) {
-  console.log(element);
-}
-
 function getDf(req = "") {
   const DB_LINK = "/fpets";
   fetch(DB_LINK + "?q=" + req)
@@ -174,7 +164,6 @@ function init(df) {
     let cards = document.querySelectorAll(".cardContainer .card");
     for (let card of cards) {
       card.addEventListener("click", popup);
-      card.addEventListener("click", choose_animal);
     }
   }
 

@@ -75,13 +75,6 @@ function find_animal() {
     ym(95126453,'reachGoal','using_find',params);
 }
 
-function choose_animal(element) {
-    if(element.srcElement.classList.contains('card')) {
-        console.log(element);
-    }   
-}
-
-
 function init_p() {
     if (document.cookie.indexOf('start_time=') === -1) {
         createCookie('start_time', Date.now(), 1);
