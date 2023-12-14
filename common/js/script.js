@@ -1,5 +1,3 @@
-init();
-
 function createCookie(name, value, days) {
     var expires;
     if (days) {
@@ -93,3 +91,5 @@ function init() {
         });
     }
 }
+
+init();
