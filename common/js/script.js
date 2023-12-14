@@ -62,38 +62,38 @@ function choose_animal() {
     console.log('is_used');
 }
 
-    
+
 function init_p() {
     if (document.cookie.indexOf('start_time=') === -1) {
         createCookie('start_time', Date.now(), 1);
     }
 
-    {   
-        add_f('.cardFontLearnMore',using_slider,'click');
-        add_f('.sliderPetsBtnLeft',using_slider,'click');
-        add_f('.sliderPetsBtnRight',using_slider,'click');
-        add_f('.sliderContainer',using_slider,'click');
-        add_f('.ourFriendsBtnGetToKnowTheRest',using_slider,'click');
-    }
 
-    {
-        add_f('.btn',using_form,'click');                
-        add_f('.phone',using_phone,'click');                        
-    }
+    add_f('.cardFontLearnMore', using_slider, 'click');
+    add_f('.sliderPetsBtnLeft', using_slider, 'click');
+    add_f('.sliderPetsBtnRight', using_slider, 'click');
+    add_f('.sliderContainer', using_slider, 'click');
+    add_f('.ourFriendsBtnGetToKnowTheRest', using_slider, 'click');
 
-    {
-        add_f('#inputSearch',choose_animal,'change');                
-    }
 
-    {
-        add_f('.card',choose_animal,'click');        
-    }
+
+    add_f('.btn', using_form, 'click');
+    add_f('.phone', using_phone, 'click');
+
+
+
+    add_f('#inputSearch', choose_animal, 'change');
+
+
+
+    add_f('.card', choose_animal, 'click');
+
 }
 
-function add_f(name,fn,event){    
+function add_f(name, fn, event) {
     document.querySelectorAll(name).forEach(element => {
-        element.addEventListener(event,fn)
-    });    
+        element.addEventListener(event, fn)
+    });
 }
 
 init_p();
