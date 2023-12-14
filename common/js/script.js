@@ -71,17 +71,6 @@ function using_email() {
     work_is_done();
 }
 
-function find_animal(event) {
-    const version = getCookie('version');
-    const params = {
-      'version': version,
-      'animal_name': event.srcElement?.classList?.[1] || event.srcElement?.parentNode?.parentNode?.classList?.[1] || 'null'      
-    }
-    
-    ym(95126453,'reachGoal','top_animal',params);
-
-  }
-
 function init_p() {
     if (document.cookie.indexOf('start_time=') === -1) {
         createCookie('start_time', Date.now(), 1);
@@ -98,16 +87,12 @@ function init_p() {
     add_f('.phone', using_phone, 'click');
     add_f('.mail', using_email, 'click');        
     add_f('#inputSearch', find_animal, 'change');
-    add_f('.card', find_animal, 'change');
     
 }
 
 
 
-function add_f(name, fn, event) {  
-    if(document.querySelector('.card') == undefined){
-        return;
-    }
+function add_f(name, fn, event) {    
     document.querySelectorAll(name).forEach(element => {
         element.addEventListener(event, fn)
     });
