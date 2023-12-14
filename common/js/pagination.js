@@ -173,6 +173,7 @@ function init(df) {
     ym(95126453,'reachGoal','top_animal',params);
 
   }
+  
   function initialPopup() {
     let cards = document.querySelectorAll(".cardContainer .card");
     for (let card of cards) {

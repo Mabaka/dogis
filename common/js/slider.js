@@ -76,7 +76,16 @@ createBlock(nextBlock)
 clearStack()
 initialPopup()
 
+function find_animal(event) {
+    const version = getCookie('version');
+    const params = {
+      'version': version,
+      'animal_name': event.srcElement?.classList?.[1] || event.srcElement?.parentNode?.parentNode?.classList?.[1] || 'null'      
+    }
+    
+    ym(95126453,'reachGoal','top_animal',params);
 
+  }
 
 function popup(){
     for (let i=0; i<df.pets.length;i++){
@@ -151,6 +160,7 @@ function initialPopup() {
     let cards = document.querySelectorAll('.currentBlock .card')
     for (let card of cards) {
         card.addEventListener("click", popup);
+        card.addEventListener("click", find_animal);
     }
 }
 
