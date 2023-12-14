@@ -1,3 +1,5 @@
+const version = getCookie('version');
+
 function getDf(req = "") {
   const DB_LINK = "/fpets";
   fetch(DB_LINK + "?q=" + req)
@@ -164,13 +166,20 @@ function init(df) {
   }
 
   function find_animal(event) {
-    console.log(event);
+
+    const params = {
+      'version': version,
+      'animal_name': event.srcElement?.classList?.[1] || 'null'
+    }
+
+    ym(95126453,'reachGoal','top_animal',params);
+
   }
   function initialPopup() {
     let cards = document.querySelectorAll(".cardContainer .card");
     for (let card of cards) {
       card.addEventListener("click", popup);
-      card.addEventListener("click",find_animal);
+      card.addEventListener("click", find_animal);
     }
   }
 
