@@ -1,8 +1,8 @@
-async function getDf(req = "") {
+function getDf(req = "") {
   const DB_LINK = "/fpets";
-  const res = await fetch(DB_LINK + "?q=" + req);
-  const res_j = await res.json();
-  init(res_j);    
+  fetch(DB_LINK + "?q=" + req)
+    .then((res) => res.json())
+    .then((res) => init(res));
 }
 
 function init(df) {
