@@ -6,7 +6,7 @@
 }
 
 .main_wrapper,.wrapper_form,.wrapper_form_element{
-    height: 300px;
+    min-height: 300px;
 }
 
 .default_input{
