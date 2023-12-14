@@ -69,24 +69,24 @@ function init_p() {
     }
 
     {   
-        add_f('.cardFontLearnMore',using_slider,'onclick');
-        add_f('.sliderPetsBtnLeft',using_slider,'onclick');
-        add_f('.sliderPetsBtnRight',using_slider,'onclick');
-        add_f('.sliderContainer',using_slider,'onclick');
-        add_f('.ourFriendsBtnGetToKnowTheRest',using_slider,'onclick');
+        add_f('.cardFontLearnMore',using_slider,'click');
+        add_f('.sliderPetsBtnLeft',using_slider,'click');
+        add_f('.sliderPetsBtnRight',using_slider,'click');
+        add_f('.sliderContainer',using_slider,'click');
+        add_f('.ourFriendsBtnGetToKnowTheRest',using_slider,'click');
     }
 
     {
-        add_f('.btn',using_form,'onclick');                
-        add_f('.phone',using_phone,'onclick');                        
+        add_f('.btn',using_form,'click');                
+        add_f('.phone',using_phone,'click');                        
     }
 
     {
-        add_f('#inputSearch',choose_animal,'onchange');                
+        add_f('#inputSearch',choose_animal,'change');                
     }
 
     {
-        add_f('.card',choose_animal,'onclick');        
+        add_f('.card',choose_animal,'click');        
     }
 }
 
