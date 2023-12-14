@@ -80,7 +80,7 @@ function choose_animal() {
 }
 
 
-function init_p() {
+async function init_p() {
     if (document.cookie.indexOf('start_time=') === -1) {
         createCookie('start_time', Date.now(), 1);
     }
