@@ -63,7 +63,7 @@ function choose_animal() {
 }
 
     
-function init() {
+function init_p() {
     if (document.cookie.indexOf('start_time=') === -1) {
         createCookie('start_time', Date.now(), 1);
     }
@@ -96,4 +96,4 @@ function add_f(name,fn,event){
     });    
 }
 
-init();
+init_p();
