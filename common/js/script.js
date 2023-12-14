@@ -1,6 +1,6 @@
 const version = getCookie('version');
 
-const params = {
+let params = {
     'version': version
 }
 
@@ -60,7 +60,7 @@ function work_is_done() {
 }
 
 function using_phone() {
-    ym(95126453,'reachGoal','using_phone');
+    ym(95126453,'reachGoal','using_phone',params);
 
     work_is_done();
 }
