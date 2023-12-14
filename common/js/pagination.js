@@ -184,12 +184,12 @@ function init(df) {
   createPage();
   initialPopup();
 
-  document.querySelector("#next").addEventListener("click", nextPage);
-  document.querySelector("#previous").addEventListener("click", previousPage);
-  document.querySelector("#last").addEventListener("click", lastPage);
-  document.querySelector("#first").addEventListener("click", firstPage);
+  document.querySelector("#next")?.addEventListener("click", nextPage);
+  document.querySelector("#previous")?.addEventListener("click", previousPage);
+  document.querySelector("#last")?.addEventListener("click", lastPage);
+  document.querySelector("#first")?.addEventListener("click", firstPage);
 
-  document.querySelector("#inputSearch").addEventListener("change", initSearch);
+  document.querySelector("#inputSearch")?.addEventListener("change", initSearch);
 
   function initSearch() {
     getDf(this.value);
