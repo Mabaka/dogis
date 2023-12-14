@@ -80,14 +80,9 @@ function init_p() {
     add_f('.btn', using_form, 'click');
     add_f('.phone', using_phone, 'click');
 
-
-
-    add_f('#inputSearch', choose_animal, 'change');
-
-
-
-    add_f('.card', choose_animal, 'click');
-
+    add_f('.card', choose_animal,'click');
+    add_f('#inputSearch', find_animal, 'change');
+    
 }
 
 function add_f(name, fn, event) {
