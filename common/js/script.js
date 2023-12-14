@@ -54,6 +54,12 @@ function using_phone() {
     work_is_done();
 }
 
+function using_email() {
+    console.log('is_used');
+
+    work_is_done();
+}
+
 function find_animal() {
     console.log('is_used');
 }
@@ -79,6 +85,7 @@ function init_p() {
 
     add_f('.btn', using_form, 'click');
     add_f('.phone', using_phone, 'click');
+    add_f('.mail', using_email, 'click');
 
     add_f('.cardContainer', choose_animal,'click');
     add_f('#inputSearch', find_animal, 'change');
