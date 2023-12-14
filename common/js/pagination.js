@@ -1,5 +1,3 @@
-const version = getCookie('version');
-
 function getDf(req = "") {
   const DB_LINK = "/fpets";
   fetch(DB_LINK + "?q=" + req)
@@ -166,7 +164,7 @@ function init(df) {
   }
 
   function find_animal(event) {
-
+    const version = getCookie('version');
     const params = {
       'version': version,
       'animal_name': event.srcElement?.classList?.[1] || 'null'
