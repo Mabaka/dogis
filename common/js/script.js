@@ -1,4 +1,4 @@
-function createCookie(name, value, days) {
+/*function createCookie(name, value, days) {
     var expires;
     if (days) {
         var date = new Date();
@@ -89,4 +89,4 @@ function find_animal() {
 
 function choose_animal() {
     console.log('is_used');
-}
+}*/
