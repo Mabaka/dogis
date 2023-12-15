@@ -163,10 +163,8 @@ function init(df) {
     });
   }
 
-  function top_animal(event) {
-    const version = getCookie('version');
-    const params = {
-      'version': version,
+  function top_animal(event) {    
+    const params = {      
       'animal_name': event.srcElement?.classList?.[1] || event.srcElement?.parentNode?.parentNode?.classList?.[1] || 'null'      
     }
     
