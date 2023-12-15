@@ -33,12 +33,12 @@ function getCookie(c_name) {
 }
 
 function using_slider() {
-    ym(95126453,'reachGoal','using_slider')
+    ym(95126453,'reachGoal','using_slider',params)
 }
 
 function using_form() {
     
-    ym(95126453,'reachGoal','using_form')
+    ym(95126453,'reachGoal','using_form',params)
     work_is_done();
 }
 
@@ -60,23 +60,25 @@ function work_is_done() {
 }
 
 function using_phone() {
-    ym(95126453,'reachGoal','using_phone');
+    ym(95126453,'reachGoal','using_phone',params);
 
     work_is_done();
 }
 
 function using_email() {
-    ym(95126453,'reachGoal','using_email');
+    ym(95126453,'reachGoal','using_email',params);
 
     work_is_done();
 }
 
 function using_find() {
-    ym(95126453,'reachGoal','using_find');
+    ym(95126453,'reachGoal','using_find',params);
 }
 
 function top_animal(event) {
+    const version = getCookie('version');
     const params = {
+      'version': version,
       'animal_name': event.srcElement?.classList?.[1] || event.srcElement?.parentNode?.parentNode?.classList?.[1] || 'null'      
     }
     

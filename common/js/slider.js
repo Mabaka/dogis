@@ -76,8 +76,10 @@ createBlock(nextBlock)
 clearStack()
 initialPopup()
 
-function find_animal(event) {    
-    const params = {      
+function find_animal(event) {
+    const version = getCookie('version');
+    const params = {
+      'version': version,
       'animal_name': event.srcElement?.classList?.[1] || event.srcElement?.parentNode?.parentNode?.classList?.[1] || 'null'      
     }
     
