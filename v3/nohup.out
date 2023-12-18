@@ -1,0 +1,31 @@
+
+  \{^_^}/ hi!
+
+  Loading src/df/pets.json
+  Done
+
+  Resources
+  http://localhost:3000/pets
+
+  Home
+  http://localhost:3000
+
+  Type s + enter at any time to create a snapshot of the database
+  Watching...
+
+  Error, can't read from stdin
+  Creating a snapshot from the CLI won't be possible
+[0mGET /metrics [33m404[0m 6.146 ms - 2[0m
+[0mGET /pets?q= [32m200[0m 5.410 ms - -[0m
+npm notice 
+npm notice New major version of npm available! 8.19.4 -> 10.2.5
+npm notice Changelog: <https://github.com/npm/cli/releases/tag/v10.2.5>
+npm notice Run `npm install -g npm@10.2.5` to update!
+npm notice 
+npm ERR! path /home/kozlovns/prj/dogis/v3
+npm ERR! command failed
+npm ERR! signal SIGHUP
+npm ERR! command sh -c -- json-server --watch src/df/pets.json
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /root/.npm/_logs/2023-12-16T02_33_30_752Z-debug-0.log
