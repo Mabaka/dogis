@@ -29,3 +29,73 @@ npm ERR! command sh -c -- json-server --watch src/df/pets.json
 
 npm ERR! A complete log of this run can be found in:
 npm ERR!     /root/.npm/_logs/2023-12-16T02_33_30_752Z-debug-0.log
+
+  \{^_^}/ hi!
+
+  Loading src/df/pets.json
+  Done
+
+  Resources
+  http://localhost:3000/pets
+
+  Home
+  http://localhost:3000
+
+  Type s + enter at any time to create a snapshot of the database
+  Watching...
+
+  Error, can't read from stdin
+  Creating a snapshot from the CLI won't be possible
+[0mGET /metrics [33m404[0m 4.006 ms - 2[0m
+[0mGET /pets?q= [32m200[0m 4.285 ms - -[0m
+[0mGET /metrics [33m404[0m 1.504 ms - 2[0m
+[0mGET /metrics [33m404[0m 1.406 ms - 2[0m
+[0mGET /metrics [33m404[0m 1.506 ms - 2[0m
+[0mGET /pets?q= [36m304[0m 3.097 ms - -[0m
+[0mGET /metrics [33m404[0m 1.504 ms - 2[0m
+[0mGET /metrics [33m404[0m 1.374 ms - 2[0m
+[0mGET /metrics [33m404[0m 1.612 ms - 2[0m
+[0mGET /metrics [33m404[0m 1.484 ms - 2[0m
+
+  \{^_^}/ hi!
+
+  Loading src/df/pets.json
+  Done
+
+  Resources
+  http://localhost:3000/pets
+
+  Home
+  http://localhost:3000
+
+  Type s + enter at any time to create a snapshot of the database
+  Watching...
+
+  Error, can't read from stdin
+  Creating a snapshot from the CLI won't be possible
+[0mGET /pets?q= [32m200[0m 6.537 ms - -[0m
+[0mGET /metrics [33m404[0m 1.808 ms - 2[0m
+[0mGET /pets?q= [36m304[0m 2.271 ms - -[0m
+[0mGET /metrics [33m404[0m 1.475 ms - 2[0m
+[0mGET /pets?q= [32m200[0m 2.919 ms - -[0m
+[0mGET /metrics [33m404[0m 1.517 ms - 2[0m
+[0mGET /metrics [33m404[0m 1.423 ms - 2[0m
+[0mGET /metrics [33m404[0m 1.383 ms - 2[0m
+[0mGET /metrics [33m404[0m 1.546 ms - 2[0m
+[0mGET /pets?q= [36m304[0m 2.943 ms - -[0m
+[0mGET /metrics [33m404[0m 1.432 ms - 2[0m
+[0mGET /pets?q= [36m304[0m 2.857 ms - -[0m
+[0mGET /metrics [33m404[0m 1.529 ms - 2[0m
+[0mGET /pets?q= [36m304[0m 2.801 ms - -[0m
+[0mGET /pets?q= [36m304[0m 2.838 ms - -[0m
+[0mGET /metrics [33m404[0m 1.421 ms - 2[0m
+[0mGET /metrics [33m404[0m 1.372 ms - 2[0m
+[0mGET /metrics [33m404[0m 1.373 ms - 2[0m
+[0mGET /metrics [33m404[0m 1.366 ms - 2[0m
+[0mGET /pets?q= [36m304[0m 2.777 ms - -[0m
+[0mGET /pets?q= [36m304[0m 2.264 ms - -[0m
+[0mGET /metrics [33m404[0m 1.374 ms - 2[0m
+[0mGET /pets?q= [36m304[0m 2.761 ms - -[0m
+[0mGET /metrics [33m404[0m 1.373 ms - 2[0m
+[0mGET /metrics [33m404[0m 1.348 ms - 2[0m
+[0mGET /metrics [33m404[0m 1.424 ms - 2[0m
